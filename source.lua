@@ -23,8 +23,9 @@ local Window = Fluent:CreateWindow({
 local Tabs = {
     ExposeA = Window:AddTab({ Title = "Expose to chat", Icon = "message-square" }),
     --ExposeB = Window:AddTab({ Title = "Expose in GUI", Icon = "terminal-square" }),
-    Fake = Window:AddTab({ Title = "Fake Expose (in chat)", Icon = "speech" }),
+    Fake = Window:AddTab({ Title = "Fake Expose (in chat)", Icon = "flame" }),
     Map = Window:AddTab({ Title = "Map", Icon = "map" }),
+    Esp = Window:AddTab({ Title = "ESP", Icon = "crosshair" }),
     User =  Window:AddTab({ Title = "Player", Icon = "user" }),
     Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
 }
@@ -231,6 +232,29 @@ workspace.Map.Barriers.StageBarrier.CanCollide = false
 end)
 
 Options.MyToggle:SetValue(false)
+
+
+--[[ 
+
+ ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄ 
+▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌
+▐░█▀▀▀▀▀▀▀▀▀ ▐░█▀▀▀▀▀▀▀▀▀ ▐░█▀▀▀▀▀▀▀█░▌
+▐░▌          ▐░▌          ▐░▌       ▐░▌
+▐░█▄▄▄▄▄▄▄▄▄ ▐░█▄▄▄▄▄▄▄▄▄ ▐░█▄▄▄▄▄▄▄█░▌
+▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌
+▐░█▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀█░▌▐░█▀▀▀▀▀▀▀▀▀ 
+▐░▌                    ▐░▌▐░▌          
+▐░█▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄█░▌▐░▌          
+▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░▌          
+ ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀           
+                                       
+
+--]]                  
+
+
+
+--wip lol
+
 
 
 --[[ 
