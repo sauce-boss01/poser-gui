@@ -10,7 +10,7 @@ game:GetService("CoreGui").RobloxGui.SettingsClippingShield.SettingsShield.MenuC
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 local Window = Fluent:CreateWindow({
-	Title = "Sauce's Poser Gui v0.2",
+	Title = "Sauce's Poser Gui v0.2.5",
 	SubTitle = "sauce_boss01 in discord",
 	TabWidth = 160,
 	Size = UDim2.fromOffset(580, 460),
