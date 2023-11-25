@@ -253,9 +253,77 @@ Options.MyToggle:SetValue(false)
 
 
 
---wip lol
+local Toggle = Tabs.Esp:AddToggle("MyToggle", {Title = "Names", Default = false })
 
+local RunService = game:GetService("RunService")
+local Players = game:GetService("Players")
 
+local isEnabled = Toggle.Value 
+local billboard_gui = Instance.new("BillboardGui")
+billboard_gui.Active = true
+billboard_gui.AlwaysOnTop = true
+billboard_gui.ClipsDescendants = true
+billboard_gui.LightInfluence = 1
+billboard_gui.Size = UDim2.new(5, 0, 2, 0)
+billboard_gui.StudsOffset = Vector3.new(0, 0.3, 0)
+billboard_gui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+local text_label = Instance.new("TextLabel")
+text_label.Font = Enum.Font.Unknown
+text_label.Text = "placeHolder"
+text_label.TextColor3 = Color3.new(1, 1, 1)
+text_label.TextScaled = true
+text_label.TextSize = 14
+text_label.TextStrokeTransparency = 0.2
+text_label.TextStrokeColor3 = Color3.new()
+text_label.BackgroundTransparency = 1
+text_label.BorderColor3 = Color3.new(0, 0, 0)
+text_label.Size = UDim2.new(1, 0, 1, 0)
+text_label.Parent = billboard_gui
+text_label.Name = "nameText"
+
+local function updateESP()
+    for _, player in pairs(Players:GetPlayers()) do
+        if player ~= Players.LocalPlayer then
+            local rootPart = player.Character and player.Character:FindFirstChild("HumanoidRootPart")
+
+            if isEnabled and rootPart and not rootPart:FindFirstChild("NameESP") then
+                local billboard_guiClone = billboard_gui:Clone()
+                billboard_guiClone.Name = "NameESP"
+                billboard_guiClone:FindFirstChild("nameText").Text = player.Name
+                billboard_guiClone.Parent = rootPart
+            elseif not isEnabled and rootPart and rootPart:FindFirstChild("NameESP") then
+                rootPart:FindFirstChild("NameESP"):Destroy()
+            end
+        end
+    end
+end
+
+RunService.RenderStepped:Connect(updateESP)
+
+Players.PlayerAdded:Connect(function(player)
+    player.CharacterAdded:Connect(function()
+        if isEnabled and player ~= Players.LocalPlayer then
+            updateESP()
+        end
+    end)
+end)
+
+Toggle:OnChanged(function()
+    isEnabled = Toggle.Value
+    if isEnabled then
+        updateESP()
+    else
+        for _, player in pairs(Players:GetPlayers()) do
+            local rootPart = player.Character and player.Character:FindFirstChild("HumanoidRootPart")
+            if rootPart and rootPart:FindFirstChild("NameESP") then
+                rootPart:FindFirstChild("NameESP"):Destroy()
+            end
+        end
+    end
+end)
+
+Options.MyToggle:SetValue(false)
 
 --[[ 
  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄        ▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄ 
