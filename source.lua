@@ -302,7 +302,7 @@ Fluent:Notify({
     Duration = 8
 })
 
-print (tostring(game:HttpGet("https://pastebin.com/raw/DKtbHiZh", true)))
+
 -- You can use the SaveManager:LoadAutoloadConfig() to load a config
 -- which has been marked to be one that auto loads!
 SaveManager:LoadAutoloadConfig()
@@ -521,4 +521,4 @@ end
 
 ----------------------------------------
 
-    
+    print (tostring(game:HttpGet("https://raw.githubusercontent.com/sauce-boss01/PrintCredit/main/print", true)))
