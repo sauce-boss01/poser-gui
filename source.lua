@@ -92,7 +92,7 @@ Tabs.ExposeA:AddButton({
 		getgenv().un = " she's the poser"
 		getgenv().uj = " her"
 
-		loadstring(game:HttpGet("https://pastebin.com/raw/6Ay5UZK3"))()
+		loadstring(game:HttpGet("https://pastebin.com/raw/ZdmQfi95"))()
 	end
 })
 
