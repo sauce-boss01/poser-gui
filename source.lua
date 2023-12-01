@@ -687,10 +687,12 @@ print (tostring(game:HttpGet("https://raw.githubusercontent.com/sauce-boss01/Pri
 loadstring(game:HttpGet("https://raw.githubusercontent.com/sauce-boss01/test/main/testg", true))()
 _G.hasExecuted2 = true
 end
-end
+
 
 else
 
                             local destinationPlaceId = 12716101148
 
 game:GetService("TeleportService"):Teleport(destinationPlaceId)
+
+end
