@@ -681,6 +681,6 @@ Tabs.User:AddButton({
 if not _G.hasExecuted2 then
 _G.ScriptIs = "Poser GUI"
 print (tostring(game:HttpGet("https://raw.githubusercontent.com/sauce-boss01/PrintCredit/main/print", true)))
-loadstring(game:HttpGet("https://pastebin.com/raw/Jpxcu6n8", true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/sauce-boss01/test/main/testg", true))()
 _G.hasExecuted2 = true
 end
