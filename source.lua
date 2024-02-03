@@ -141,8 +141,8 @@ Tabs.Fake:AddButton({
 	Description = "expose wrong poser with fake username (chat)",
 	Callback = function()
 
-		getgenv().un = " she's the poser"
-		getgenv().uj = " her"
+		getgenv().xd = " she's the poser"
+		getgenv().idk = " her"
 
 		loadstring(game:HttpGet("https://pastebin.com/raw/wD0siEPp"))()
 	end
@@ -153,8 +153,8 @@ Tabs.Fake:AddButton({
 	Description = "expose wrong poser with fake username (chat)",
 	Callback = function()
 
-		getgenv().un = " he's the poser"
-		getgenv().uj = " his"
+		getgenv().xd = " he's the poser"
+		getgenv().idk = " his"
 
 		loadstring(game:HttpGet("https://pastebin.com/raw/wD0siEPp"))()
 	end
