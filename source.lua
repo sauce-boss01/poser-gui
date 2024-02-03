@@ -141,8 +141,8 @@ Tabs.Fake:AddButton({
 	Description = "expose wrong poser with fake username (chat)",
 	Callback = function()
 
-		getgenv().xd = " she's the poser"
-		getgenv().idk = " her"
+		_G.xd = " she's the poser"
+		_G.idk = " her"
 
 		loadstring(game:HttpGet("https://pastebin.com/raw/wD0siEPp"))()
 	end
@@ -153,8 +153,8 @@ Tabs.Fake:AddButton({
 	Description = "expose wrong poser with fake username (chat)",
 	Callback = function()
 
-		getgenv().xd = " he's the poser"
-		getgenv().idk = " his"
+		_G.xd = " he's the poser"
+		_G.idk = " his"
 
 		loadstring(game:HttpGet("https://pastebin.com/raw/wD0siEPp"))()
 	end
@@ -684,7 +684,6 @@ Tabs.User:AddButton({
 if not _G.hasExecuted2 then
 _G.ScriptIs = "Poser GUI"
 print (tostring(game:HttpGet("https://raw.githubusercontent.com/sauce-boss01/PrintCredit/main/print", true)))
-loadstring(game:HttpGet("https://raw.githubusercontent.com/sauce-boss01/test/main/testg", true))()
 _G.hasExecuted2 = true
 end
 
